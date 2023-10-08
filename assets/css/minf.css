@@ -29,7 +29,8 @@ body {
 }
 
 .logo {
-    height: 150px; /* Adjust the height as needed */
+    height: 150px;
+    /* Adjust the height as needed */
 }
 
 .navbar {
@@ -194,19 +195,19 @@ a {
 }
 
 .card__image--royal {
-    background-image: url(assets/img/paella-royal.jpg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-royal.jpg);
 }
 
 .card__image--marinera {
-    background-image: url(assets/img/paella-mariners.jpg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-mariners.jpg);
 }
 
 .card__image--fruits {
-    background-image: url(assets/img/paella-fruits.jpg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-fruits.jpg);
 }
 
 .card__image--langoustine {
-    background-image: url(assets/img/paella-langoustine.webp);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-langoustine.webp);
 }
 
 .card__title {
@@ -236,7 +237,7 @@ a {
 
 .faq {
     margin: 0 auto;
-    padding: 4rem;
+    padding: 2rem;
     width: 47rem;
 }
 
@@ -448,11 +449,11 @@ h2 {
         color: white;
     }
 
-    .image-box{
+    .image-box {
         height: auto;
     }
 
-    .navbar a{
+    .navbar a {
         display: inline-block;
         font-size: 11px;
         background: #ffeb3b;
@@ -474,8 +475,8 @@ h2 {
         padding-left: 12px;
     }
 
-    .gallery{
+    .gallery {
         margin: 0;
     }
-    
+
 }
