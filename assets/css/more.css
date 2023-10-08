@@ -92,8 +92,6 @@ p {
 p,
 ul {
     color: white;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
 }
 
 .uk-form-label {
@@ -253,6 +251,10 @@ ul {
         font-size: 3rem;
         margin-bottom: 30px;
         color: white;
+    }
+
+    .footer-logo {
+        padding: 0;
     }
 
 }
