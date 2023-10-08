@@ -176,6 +176,10 @@ body {
         text-align: center;
     }
 
+    .logo{
+        height: 100px;
+    }
+
     .title {
         font-size: 3em;
     }
