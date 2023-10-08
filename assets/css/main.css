@@ -34,7 +34,7 @@ header {
     position: relative;
     width: 60px;
     height: 60px;
-    background: url(https://raw.githubusercontent.com/exstoner/cspaella/mainassets/icons/menu_rounded.png);
+    background: url(https://raw.githubusercontent.com/exstoner/cspaella/main/assets/icons/menu_rounded.png);
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: center;
@@ -42,7 +42,7 @@ header {
 }
 
 .toggle.active {
-    background: url(https://raw.githubusercontent.com/exstoner/cspaella/mainassets/icons/menu-cancel.png);
+    background: url(https://raw.githubusercontent.com/exstoner/cspaella/main/assets/icons/menu-cancel.png);
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: center;
@@ -320,19 +320,19 @@ a {
 }
 
 .card__image--royal {
-    background-image: url(assets/img/paella-royal.jpg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-royal.jpg);
 }
 
 .card__image--marinera {
-    background-image: url(assets/img/paella-mariners.jpg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-mariners.jpg);
 }
 
 .card__image--fruits {
-    background-image: url(assets/img/paella-fruits.jpg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-fruits.jpg);
 }
 
 .card__image--langoustine {
-    background-image: url(assets/img/paella-langoustine.webp);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/main/assets/img/paella-langoustine.webp);
 }
 
 .card__title {
@@ -368,7 +368,7 @@ a {
 }
 
 .testimonial-section {
-    background-image: url(assets/img/testimonial-bg.svg);
+    background-image: url(https://raw.githubusercontent.com/exstoner/paellawebsite/b39ff095407c439fefa373f59a2ef0230d968a32/assets/img/testimonial-bg.svg);
     /* Replace with your image path */
     position: relative;
     background-size: cover;
