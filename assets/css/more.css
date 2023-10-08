@@ -229,6 +229,28 @@ ul {
         border-color: #e70c08;
     }
 
+    .navbar a {
+        display: inline-block;
+        font-size: 11px;
+        background: #ffeb3b;
+        padding: 5px 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #111;
+        letter-spacing: 0px;
+        /* transition: 0.2s; */
+        margin: 4px;
+        border-radius: 5px;
+    }
+
+    #sec h2 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: white;
+    }
+
 }
 
 
