@@ -194,19 +194,19 @@ a {
 }
 
 .card__image--royal {
-    background-image: url(/assets/img/paella-royal.jpg);
+    background-image: url(assets/img/paella-royal.jpg);
 }
 
 .card__image--marinera {
-    background-image: url(/assets/img/paella-mariners.jpg);
+    background-image: url(assets/img/paella-mariners.jpg);
 }
 
 .card__image--fruits {
-    background-image: url(/assets/img/paella-fruits.jpg);
+    background-image: url(assets/img/paella-fruits.jpg);
 }
 
 .card__image--langoustine {
-    background-image: url(/assets/img/paella-langoustine.webp);
+    background-image: url(assets/img/paella-langoustine.webp);
 }
 
 .card__title {
