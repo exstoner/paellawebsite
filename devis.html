@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.22/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="/assets/css/more.css">
+    <title>Demande de devis</title>
+</head>
+
+<body>
+    <!-- header -->
+
+    <div class="container">
+        <div class="header">
+            <!-- Logo -->
+            <a href=""><img class="logo" src="/assets/img/logo_white.png" alt=""></a>
+            <!-- Navbar -->
+            <nav class="navbar">
+                <a href="index.html">Accueil</a>
+                <a href="histoire.html">Notre histoire</a>
+                <a href="paellas.html">Nos Paellas</a>
+                <a href="devis.html">Demande de devis</a>
+            </nav>
+        </div>
+    </div>
+
+    <section id="sec">
+        <h2>Demande De Devis</h2>
+    </section>
+
+    <div>
+        <p style="text-align: center;">
+            Demander votre devis en remplissant le formulaire ci-dessous, nous vous
+            confirmons la bonne réception de votre demande et nous serons heureux de
+            venir vous satisfaire et de vous surprendre gustativement.
+        </p>
+    </div>
+    <div class="uk-flex uk-flex-wrap uk-flex-center">
+        <div class="uk-card uk-card-default uk-card-body">
+            <h4>Paëlla Cuisinée sur place:</h4>
+            <ul>
+                <li>A partir de 30 parts minimum</li>
+                <li>Le délai : Passez votre commande 1 à 2 semaine à l’avance</li>
+            </ul>
+        </div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h4>Paëlla en livraison:</h4>
+            <ul>
+                <li>A partir de 20 parts minimum</li>
+                <li>Le délai : Passez votre commande 48h à 72h à l’avance</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr style="visibility: hidden" />
+
+    <div class="uk-flex uk-flex-center">
+        <form class="uk-form-horizontal uk-margin-large">
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Nom:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Nom..." required />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Prénom:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Prénom..."
+                        required />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Email:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre email..."
+                        required />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Téléphone:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Téléphone..."
+                        required />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Addresse:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Addresse..."
+                        required />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Date de réservation:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="date" placeholder="" required />
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-form-label">Choisissez vos plats:</div>
+                <div class="uk-form-controls uk-form-controls-text">
+                    <label><input class="uk-radio" type="radio" name="plat" required /> Pour
+                        déjeuner</label>
+                    <label><input class="uk-radio" type="radio" name="plat" required /> Pour
+                        dîner</label>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-label">Service:</div>
+                <div class="uk-form-controls uk-form-controls-text">
+                    <label><input class="uk-radio" type="radio" name="service" required />
+                        Cuisine sur place</label>
+                    <label><input class="uk-radio" type="radio" name="service" required />
+                        En livraison</label>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-label">Vous êtes:</div>
+                <div class="uk-form-controls uk-form-controls-text">
+                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                        Particulier</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                        Entreprise</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                        Association</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                        Club Sportif</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                        École</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                        Autres</label>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <div class="uk-form-label">Type d'évènements:</div>
+                <div class="uk-form-controls uk-form-controls-text">
+                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                        Mariage</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                        Événement</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                        Anniversaire</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                        Kermesse</label><br />
+                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                        Baptême</label>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Nombre de personnes:</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-horizontal-text" type="number"
+                        placeholder="Combien de personnes?" />
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text">Vos Questions:</label>
+                <div class="uk-form-controls">
+                    <textarea class="uk-textarea" rows="5"
+                        placeholder="Y a-t-il des informations supplémentaires que vous aimeriez partager avec nous ?"
+                        aria-label="Textarea"></textarea>
+                </div>
+            </div>
+            <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">
+                Envoyer
+            </button>
+        </form>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer-logo">
+        <a href="index.html"><img src="/assets/img/logo_white.png" alt="Logo" style="height: 100px"></a>
+    </div>
+    <p class="copyright">Tous droits réservés &copy; 2024 Casapaella</p>
+
+
+
+    <script src="/assets/js/uikit.js"></script>
+    <script src="/assets/js/uikit.min.js"></script>
+</body>
+
+</html>
