@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="assets/css/more.css">
     <title>Demande De Devis</title>
     <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#contact-form").on("submit", function (event) {
+                event.preventDefault();
+
+                let formData = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "process_form.php",
+                    data: formData,
+                    success: function (response) {
+                        $("#form-result").html(response);
+                        // Reset the form after successful submission
+                        $("#contact-form")[0].reset();
+                    },
+                    error: function (xhr, status, error) {
+                        $("#form-result").html("Une erreur s'est produite. Veuillez réessayer.");
+                    },
+                });
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -57,121 +82,131 @@
 
     <hr style="visibility: hidden" />
 
+
+
     <div class="uk-flex uk-flex-center">
-        <form class="uk-form-horizontal uk-margin-large" onsubmit="sendEmail()">
+        <form class="uk-form-horizontal uk-margin-large" id="contact-form" method="post" action="process_form.php"
+            enctype="multipart/form-data">
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Nom:</label>
+                <label class="uk-form-label" for="nom">Nom:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Nom..." required />
+                    <input class="uk-input" id="nom" name="nom" type="text" placeholder="Votre Nom..." required />
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Prénom:</label>
+                <label class="uk-form-label" for="prenom">Prénom:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Prénom..."
+                    <input class="uk-input" id="prenom" name="prenom" type="text" placeholder="Votre Prénom..."
                         required />
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Email:</label>
+                <label class="uk-form-label" for="email">Email:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre email..."
+                    <input class="uk-input" id="email" name="email" type="email" placeholder="Votre email..."
                         required />
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Téléphone:</label>
+                <label class="uk-form-label" for="telephone">Téléphone:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Téléphone..."
+                    <input class="uk-input" id="telephone" name="telephone" type="tel" placeholder="Votre Téléphone..."
                         required />
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Addresse:</label>
+                <label class="uk-form-label" for="adresse">Adresse:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Votre Addresse..."
+                    <input class="uk-input" id="adresse" name="adresse" type="text" placeholder="Votre Adresse..."
                         required />
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Date de réservation:</label>
+                <label class="uk-form-label" for="date-reservation">Date de réservation:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="date" placeholder="" required />
+                    <input class="uk-input" id="date-reservation" name="date" type="date" required />
                 </div>
             </div>
 
             <div class="uk-margin">
                 <div class="uk-form-label">Choisissez vos plats:</div>
                 <div class="uk-form-controls uk-form-controls-text">
-                    <label><input class="uk-radio" type="radio" name="plat" required /> Pour
+                    <label><input class="uk-radio" type="radio" name="platChoice" value="Pour déjeuner" required /> Pour
                         déjeuner</label>
-                    <label><input class="uk-radio" type="radio" name="plat" required /> Pour
+                    <label><input class="uk-radio" type="radio" name="platChoice" value="Pour dîner" required /> Pour
                         dîner</label>
                 </div>
             </div>
+
             <div class="uk-margin">
                 <div class="uk-form-label">Service:</div>
                 <div class="uk-form-controls uk-form-controls-text">
-                    <label><input class="uk-radio" type="radio" name="service" required />
-                        Cuisine sur place</label>
-                    <label><input class="uk-radio" type="radio" name="service" required />
-                        En livraison</label>
+                    <label><input class="uk-radio" type="radio" name="serviceChoice" value="Cuisine sur place"
+                            required /> Cuisine sur
+                        place</label>
+                    <label><input class="uk-radio" type="radio" name="serviceChoice" value="En livraison" required /> En
+                        livraison</label>
                 </div>
             </div>
+
             <div class="uk-margin">
                 <div class="uk-form-label">Vous êtes:</div>
                 <div class="uk-form-controls uk-form-controls-text">
-                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                    <label><input class="uk-radio" type="radio" name="role" value="Particulier" required />
                         Particulier</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                    <label><input class="uk-radio" type="radio" name="role" value="Entreprise" required />
                         Entreprise</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                    <label><input class="uk-radio" type="radio" name="role" value="Association" required />
                         Association</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio1" required />
-                        Club Sportif</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio1" required />
+                    <label><input class="uk-radio" type="radio" name="role" value="Club Sportif" required /> Club
+                        Sportif</label><br />
+                    <label><input class="uk-radio" type="radio" name="role" value="École" required />
                         École</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio1" required />
-                        Autres</label>
+                    <label><input class="uk-radio" type="radio" name="role" value="Autres" required /> Autres</label>
                 </div>
             </div>
+
             <div class="uk-margin">
                 <div class="uk-form-label">Type d'évènements:</div>
                 <div class="uk-form-controls uk-form-controls-text">
-                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                    <label><input class="uk-radio" type="radio" name="eventType" value="Mariage" required />
                         Mariage</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                    <label><input class="uk-radio" type="radio" name="eventType" value="Événement" required />
                         Événement</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                    <label><input class="uk-radio" type="radio" name="eventType" value="Anniversaire" required />
                         Anniversaire</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                    <label><input class="uk-radio" type="radio" name="eventType" value="Kermesse" required />
                         Kermesse</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                    <label><input class="uk-radio" type="radio" name="eventType" value="Baptême" required />
                         Baptême</label><br />
-                    <label><input class="uk-radio" type="radio" name="radio2" required />
+                    <label><input class="uk-radio" type="radio" name="eventType" value="Autres" required />
                         Autres</label>
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Nombre de personnes:</label>
+                <label class="uk-form-label" for="number-of-people">Nombre de personnes:</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-horizontal-text" type="number"
+                    <input class="uk-input" id="number-of-people" name="numPeople" type="number"
                         placeholder="Combien de personnes?" />
                 </div>
             </div>
             <div class="uk-margin">
-                <label class="uk-form-label" for="form-horizontal-text">Vos Questions:</label>
+                <label class="uk-form-label" for="questions">Vos Questions:</label>
                 <div class="uk-form-controls">
-                    <textarea class="uk-textarea" rows="5"
+                    <textarea class="uk-textarea" id="questions" rows="5" name="message"
                         placeholder="Y a-t-il des informations supplémentaires que vous aimeriez partager avec nous ?"
                         aria-label="Textarea"></textarea>
                 </div>
             </div>
-            <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">
+            <button type="submit" name="submit" value="Submit"
+                class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">
                 Envoyer
             </button>
+            <div id="form-result" style="text-align: center;padding: 20px;"></div>
         </form>
     </div>
+
+
 
 
     <!-- Footer -->
@@ -184,23 +219,10 @@
 
     <script src="assets/js/uikit.js"></script>
     <script src="assets/js/uikit.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "username",
-                Password: "password",
-                To: 'them@website.com',
-                From: "you@isp.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
-            }).then(
-                message => alert(message)
-            );
-        }
-    </script>
+
+
+
+
 </body>
 
 </html>
